@@ -1,0 +1,543 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Landing Page */
+        .landing {
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .landing h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .landing .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .landing p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Forms */
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            margin: 2rem auto;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-toggle {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .toggle-buttons {
+            display: inline-flex;
+            background: #f8f9fa;
+            border-radius: 25px;
+            padding: 4px;
+        }
+
+        .toggle-btn {
+            padding: 0.5rem 1.5rem;
+            border: none;
+            background: transparent;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .toggle-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .user-type-card {
+            background: white;
+            border: 3px solid #e1e5e9;
+            border-radius: 15px;
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .user-type-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+
+        .user-type-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .user-type-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .user-type-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .user-type-card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .user-type-card ul li {
+            padding: 0.3rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .user-type-card ul li:before {
+            content: "✓";
+            color: #4caf50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+          
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .interest-tag {
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border: 2px solid #e1e5e9;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .interest-tag.selected {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        /* Dashboard */
+        .dashboard {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* CHANGED: force exactly 2 cards per row */
+        .dashboard-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* was: repeat(auto-fit, minmax(300px, 1fr)) */
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            opacity: 0.9;
+        }
+
+        .matches-section {
+            margin-top: 2rem;
+        }
+
+        .match-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .match-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .match-info {
+            flex: 1;
+        }
+
+        .match-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .match-rating {
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .match-interests {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .match-interest {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .match-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-small {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-connect {
+            background: #4caf50;
+            color: white;
+        }
+
+        .btn-view {
+            background: #2196f3;
+            color: white;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Features section */
+        .features {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 0;
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .landing h1 {
+                font-size: 2.5rem;
+            }
+
+            .landing .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form-container {
+                margin: 1rem;
+                padding: 2rem;
+            }
+
+            .dashboard-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .match-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .interests-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            /* On mobile, show 1 card per row for readability */
+            .dashboard-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+          /* OVERRIDE: Make secondary buttons in match cards visible */
+.match-card .btn.btn-secondary.btn-small {
+  background: transparent !important;
+  color: #667eea !important;
+  border: 2px solid #667eea !important;
+}
+
+.match-card .btn.btn-secondary.btn-small:hover {
+  background: #667eea !important;
+  color: #fff !important;
+}
+
+/* Make secondary buttons visible on profile pages (white form container) */
+.form-container .btn.btn-secondary {
+  background: transparent !important;
+  color: #667eea !important;
+  border: 2px solid #667eea !important;
+}
+.form-container .btn.btn-secondary:hover {
+  background: #667eea !important;
+  color: #fff !important;
+}
+
+/* Force visible secondary buttons inside inbox threads */
+.thread-card .btn.btn-secondary {
+  background: transparent !important;
+  color: #667eea !important;
+  border: 2px solid #667eea !important;
+}
+
+.thread-card .btn.btn-secondary:hover {
+  background: #667eea !important;
+  color: #fff !important;
+}
+
+/* Proper grid for Interests on profile edit */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Make the pill look clickable */
+.interest-tag {
+  cursor: pointer;
+  user-select: none;
+}
